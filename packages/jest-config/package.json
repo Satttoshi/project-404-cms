@@ -1,0 +1,16 @@
+{
+  "name": "@repo/jest-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.5.2",
+  "devDependencies": {
+    "@jest/types": "^29.6.3"
+  }
+}
