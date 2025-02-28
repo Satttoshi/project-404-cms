@@ -3,9 +3,9 @@ import type { PlopTypes } from "@turbo/gen";
 // Learn more about Turborepo Generators at https://turbo.build/repo/docs/core-concepts/monorepos/code-generation
 
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
-  // A simple generator to add a new React component to the internal UI library
+  // A generator to add a new React component with proper folder structure
   plop.setGenerator("react-component", {
-    description: "Adds a new react component",
+    description: "Adds a new React component with tests and stories",
     prompts: [
       {
         type: "input",
@@ -14,16 +14,38 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
       },
     ],
     actions: [
+      // Create the main component file
       {
         type: "add",
-        path: "src/{{kebabCase name}}.tsx",
+        path: "src/components/{{pascalCase name}}/{{pascalCase name}}.tsx",
         templateFile: "templates/component.hbs",
       },
+      // Create a test file
+      {
+        type: "add",
+        path: "src/components/{{pascalCase name}}/{{pascalCase name}}.test.tsx",
+        templateFile: "templates/component.test.hbs",
+      },
+      // Create a story file
+      {
+        type: "add",
+        path: "src/components/{{pascalCase name}}/{{pascalCase name}}.stories.tsx",
+        templateFile: "templates/component.stories.hbs",
+      },
+      // Create an index file for clean exports
+      {
+        type: "add",
+        path: "src/components/{{pascalCase name}}/index.ts",
+        templateFile: "templates/component.index.hbs",
+      },
+      // Update package.json exports
       {
         type: "append",
         path: "package.json",
+        // @ts-ignore
         pattern: /"exports": {(?<insertion>)/g,
-        template: '    "./{{kebabCase name}}": "./src/{{kebabCase name}}.tsx",',
+        template:
+          '    "./{{pascalCase name}}": "./src/components/{{pascalCase name}}/index.ts",',
       },
     ],
   });

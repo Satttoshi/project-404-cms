@@ -1,0 +1,26 @@
+import type { Meta, StoryObj } from '@storybook/react';
+import { {{pascalCase name}} } from './{{pascalCase name}}';
+
+const meta: Meta<typeof {{pascalCase name}}> = {
+  title: 'Components/{{pascalCase name}}',
+  component: {{pascalCase name}},
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+};
+
+export default meta;
+type Story = StoryObj<typeof {{pascalCase name}}>;
+
+export const Default: Story = {
+  args: {
+    children: 'Default {{pascalCase name}} Content',
+  },
+};
+
+export const WithLongContent: Story = {
+  args: {
+    children: 'This is a longer example of content inside the {{pascalCase name}} component to demonstrate how it handles larger amounts of text.',
+  },
+};
