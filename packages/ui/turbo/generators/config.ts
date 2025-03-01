@@ -12,30 +12,36 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         name: 'name',
         message: 'What is the name of the component?',
       },
+      {
+        type: 'list',
+        name: 'componentType',
+        message: 'What type of component is this?',
+        choices: ['core', 'smart'],
+      },
     ],
     actions: [
       // Create the main component file
       {
         type: 'add',
-        path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.tsx',
+        path: 'src/components/{{componentType}}/{{pascalCase name}}/{{pascalCase name}}.tsx',
         templateFile: 'templates/component.hbs',
       },
       // Create a test file
       {
         type: 'add',
-        path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.test.tsx',
+        path: 'src/components/{{componentType}}/{{pascalCase name}}/{{pascalCase name}}.test.tsx',
         templateFile: 'templates/component.test.hbs',
       },
       // Create a story file
       {
         type: 'add',
-        path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.stories.tsx',
+        path: 'src/components/{{componentType}}/{{pascalCase name}}/{{pascalCase name}}.stories.tsx',
         templateFile: 'templates/component.stories.hbs',
       },
       // Create an index file for clean exports
       {
         type: 'add',
-        path: 'src/components/{{pascalCase name}}/index.ts',
+        path: 'src/components/{{componentType}}/{{pascalCase name}}/index.ts',
         templateFile: 'templates/component.index.hbs',
       },
       // Update index.ts with new component export
@@ -43,7 +49,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         type: 'modify',
         path: 'index.ts',
         pattern: /([\r\n]*)$/,
-        template: "\nexport * from './src/components/{{pascalCase name}}';\n",
+        template: "\nexport * from './src/components/{{componentType}}/{{pascalCase name}}';\n",
       },
     ],
   });
