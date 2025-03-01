@@ -1,8 +1,13 @@
 {
-  "name": "@repo/jest-config",
+  "name": "@repo/tailwind-config",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "index.js",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": "./tailwind.config.ts"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +16,11 @@
   "license": "ISC",
   "packageManager": "pnpm@10.5.2",
   "devDependencies": {
-    "@jest/types": "^29.6.3",
     "@repo/typescript-config": "workspace:*"
+  },
+  "dependencies": {
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss": "^4.0.9",
+    "tailwindcss-animate": "^1.0.7"
   }
 }

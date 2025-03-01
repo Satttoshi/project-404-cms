@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "allowImportingTsExtensions": true
+  },
+  "extends": "@repo/typescript-config/react-library.json",
+  "include": ["tailwind.config.ts"],
+  "exclude": ["node_modules", "dist"]
+}
