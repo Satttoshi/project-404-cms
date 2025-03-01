@@ -1,5 +1,5 @@
 {
-  "name": "@repo/database",
+  "name": "@repo/db",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -10,7 +10,7 @@
     "generate": "drizzle-kit generate",
     "push": "drizzle-kit push",
     "studio": "drizzle-kit studio",
-    "lint": "eslint src/",
+    "lint": "eslint src",
     "clean": "rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:db-connection": "npx tsx src/test-connection.ts"

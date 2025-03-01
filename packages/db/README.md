@@ -81,7 +81,7 @@ This command starts a local server where you can browse and edit your database t
 To use this package in your Next.js applications, import the database connection and schema:
 
 ```typescript
-import { db, pages, components, assets } from '@repo/database';
+import { db, pages, components, assets } from '@repo/db';
 
 // Example: Query pages
 async function getPages() {
