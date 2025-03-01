@@ -1,19 +1,7 @@
-import path from "path";
-import type { Config } from "tailwindcss";
-import { semantic as semanticColors } from "./colors.ts";
+import type { Config } from 'tailwindcss';
 
-const uiPath = path.resolve(__dirname, "../../packages/ui/src");
-
-type BaseConfig = Config & {
-  content: string[];
+const config: Config = {
+  theme: {},
 };
 
-export const baseConfig: BaseConfig = {
-  content: [path.relative("./", uiPath) + "/**/*.{js,jsx,ts,tsx,mdx}"],
-  theme: {
-    colors: {
-      ...semanticColors,
-    },
-  },
-  plugins: [],
-};
+export default config;
