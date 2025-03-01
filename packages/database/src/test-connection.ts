@@ -3,7 +3,6 @@ import { neon } from "@neondatabase/serverless";
 import { drizzle } from "drizzle-orm/neon-http";
 import { pages } from "./schema.js";
 
-// Load environment variables directly in this file as well
 dotenv.config({ path: "../../.env" });
 
 async function testConnection() {
@@ -12,10 +11,10 @@ async function testConnection() {
     console.log("Database URL exists:", !!dbUrl);
 
     if (!dbUrl) {
-      throw new Error("DATABASE_URL environment variable is not set");
+      console.error("DATABASE_URL environment variable is not set");
+      return false;
     }
 
-    // Create a connection here instead of importing
     const sql = neon(dbUrl);
     const db = drizzle({ client: sql });
 
