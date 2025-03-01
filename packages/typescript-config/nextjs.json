@@ -8,5 +8,6 @@
     "allowJs": true,
     "jsx": "preserve",
     "noEmit": true
-  }
+  },
+  "include": ["**/*.ts", "**/*.tsx", "**/*.mjs", "next-env.d.ts", "next.config.mjs", ".next/types/**/*.ts"]
 }
