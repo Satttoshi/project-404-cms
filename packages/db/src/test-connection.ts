@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 import { neon } from "@neondatabase/serverless";
 import { drizzle } from "drizzle-orm/neon-http";
-import { pages } from "./schema.js";
+import { pages } from "./schema";
 
 dotenv.config({ path: "../../.env" });
 

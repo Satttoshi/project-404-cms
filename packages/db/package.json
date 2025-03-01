@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
-  "type": "module",
   "scripts": {
     "build": "tsc",
-    "dev": "tsc --watch",
+    "deploy": "pnpm build && pnpm generate && pnpm push && pnpm test:db-connection",
     "generate": "drizzle-kit generate",
     "push": "drizzle-kit push",
     "studio": "drizzle-kit studio",
