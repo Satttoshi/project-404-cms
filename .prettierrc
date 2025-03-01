@@ -1,12 +1,9 @@
 {
+	"&schema": "https://json.schemastore.org/prettierrc",
 	"printWidth": 120,
-	"tabWidth": 2,
-	"useTabs": false,
-	"semi": true,
-	"singleQuote": false,
-	"trailingComma": "none",
-	"bracketSpacing": true,
+	"singleQuote": true,
+	"trailingComma": "all",
 	"jsxBracketSameLine": true,
-	"arrowParens": "always",
-	"proseWrap": "preserve"
+	"plugins": ["prettier-plugin-tailwindcss"],
+	"tailwindFunctions": ["twMerge", "twJoin"]
 }

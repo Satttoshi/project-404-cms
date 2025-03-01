@@ -1,5 +1,7 @@
 {
+  "$schema": "https://json.schemastore.org/package.json",
   "name": "project-404-cms",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -15,6 +17,7 @@
     "@commitlint/config-conventional": "^19.7.1",
     "husky": "^8.0.0",
     "prettier": "^3.5.0",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "turbo": "^2.4.4",
     "typescript": "5.7.3"
   },
