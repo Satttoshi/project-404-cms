@@ -1,10 +1,15 @@
 import React from 'react';
 
-export const Text = ({ children }: { children: React.ReactNode }) => {
+type TextProps = {
+  value: string;
+  onClick: () => void;
+};
+
+export const Text = ({ value, onClick }: TextProps) => {
   return (
-    <div>
+    <div onClick={onClick} className="cursor-pointer">
       <h1 className="bg-avocado-500 text-8xl text-blue-500">Text Component</h1>
-      {children}
+      <div className="p-2">{value}</div>
     </div>
   );
 };

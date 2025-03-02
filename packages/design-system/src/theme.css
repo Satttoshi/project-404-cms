@@ -5,4 +5,17 @@
   --color-avocado-400: oklch(0.92 0.19 114.08);
   --color-avocado-500: oklch(0.84 0.18 117.33);
   --color-avocado-600: oklch(0.53 0.12 118.34);
+
+  --color-blue-500: #6060d8;
+  --color-blue-600: #1b1bc6;
+
+  --color-black: #0c0c0c;
+
+  --color-primary: var(--color-avocado-500);
+  --color-secondary: var(--color-black);
+  --color-tertiary: var(--color-blue-500);
+
+  --color-background: var(--color-secondary);
+
+  --color-manu: #4d0f51;
 }

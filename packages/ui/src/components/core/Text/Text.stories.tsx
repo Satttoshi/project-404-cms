@@ -15,12 +15,13 @@ type Story = StoryObj<typeof Text>;
 
 export const Default: Story = {
   args: {
-    children: 'Default Text Content',
+    value: 'Default Text Content',
   },
 };
 
 export const WithLongContent: Story = {
   args: {
-    children: 'This is a longer example of content inside the Text component to demonstrate how it handles larger amounts of text.',
+    value:
+      'This is a longer example of content inside the Text component to demonstrate how it handles larger amounts of text.',
   },
 };
