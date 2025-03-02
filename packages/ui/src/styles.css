@@ -1,2 +1,13 @@
 @import "tailwindcss";
 @import "@repo/design-system/theme.css";
+
+/* Editable components (ec)*/
+@layer components {
+    /* Text.tsx */
+    .ec-text-heading {
+        @apply bg-primary text-8xl text-tertiary;
+    }
+    .ec-text-content {
+        @apply p-2 text-tertiary;
+    }
+}

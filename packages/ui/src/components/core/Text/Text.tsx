@@ -8,8 +8,8 @@ type TextProps = {
 export const Text = ({ value, onClick }: TextProps) => {
   return (
     <div onClick={onClick} className="cursor-pointer">
-      <h1 className="bg-avocado-500 text-8xl text-blue-500">Text Component</h1>
-      <div className="p-2">{value}</div>
+      <h1 className="ec-text-heading">Text Component</h1>
+      <div className="ec-text-content">{value}</div>
     </div>
   );
 };

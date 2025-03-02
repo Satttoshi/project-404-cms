@@ -21,14 +21,14 @@ export const EditText = ({
 
   return (
     <div>
-      <h1 className="bg-avocado-500 text-8xl text-blue-500">Text Component</h1>
+      <h1 className="ec-text-heading">Text Component</h1>
       <input
         type="text"
         value={value}
         onChange={handleChange}
         onBlur={onBlur}
         onFocus={onFocus}
-        className="w-full rounded border border-gray-300 p-2"
+        className="ec-text-content w-full rounded border border-gray-300"
         autoFocus
       />
     </div>
