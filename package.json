@@ -11,6 +11,7 @@
     "check-types": "turbo run check-types",
     "prepare": "husky install",
     "test": "echo \"No tests specified - pre-commit hook passing\"",
+    "clear-cache": "rimraf .turbo node_modules/.cache apps/web/.next apps/storybook/storybook-static && echo Cache cleared successfully!",
     "preinstall": "pnpm build --filter=@repo/design-system --filter=@repo/ui"
   },
   "devDependencies": {
@@ -19,6 +20,7 @@
     "husky": "^8.0.0",
     "prettier": "^3.5.0",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "rimraf": "^6.0.1",
     "turbo": "^2.4.4",
     "typescript": "5.7.3"
   },
