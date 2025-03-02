@@ -21,7 +21,7 @@ type EditableContentProps = {
   displayComponent: ComponentType<DisplayComponentProps>;
 };
 
-export const EditableContent = ({
+export const Editable = ({
   initialValue,
   onSave,
   editComponent: EditComponent,

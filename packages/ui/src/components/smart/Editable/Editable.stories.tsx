@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { EditableContent } from './EditableContent';
+import { Editable } from './Editable';
 import { EditText } from '../../core/Text/EditText';
 import { Text } from '../../core/Text';
 
-const meta: Meta<typeof EditableContent> = {
-  title: 'Components/EditableContent',
-  component: EditableContent,
+const meta: Meta<typeof Editable> = {
+  title: 'Components/Editable',
+  component: Editable,
   parameters: {
     layout: 'centered',
   },
@@ -13,7 +13,7 @@ const meta: Meta<typeof EditableContent> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof EditableContent>;
+type Story = StoryObj<typeof Editable>;
 
 export const Default: Story = {
   args: {
