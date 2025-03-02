@@ -10,7 +10,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
     "prepare": "husky install",
-    "test": "echo \"No tests specified - pre-commit hook passing\""
+    "test": "echo \"No tests specified - pre-commit hook passing\"",
+    "preinstall": "pnpm build --filter=@repo/design-system --filter=@repo/ui"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.7.1",
