@@ -36,3 +36,10 @@ export const Outline: Story = {
     variant: 'outline',
   },
 };
+
+export const Ghost: Story = {
+  args: {
+    children: 'Ghost Button',
+    variant: 'ghost',
+  },
+};
