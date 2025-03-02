@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Editable } from './Editable';
-import { EditText } from '../../core/Text/EditText';
+import { EditText } from '../../core/Text';
 import { Text } from '../../core/Text';
 
 const meta: Meta<typeof Editable> = {

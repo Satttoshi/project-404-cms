@@ -1,6 +1,6 @@
 import React from 'react';
 
-type TextProps = {
+export type TextProps = {
   value: string;
   onClick: () => void;
 };

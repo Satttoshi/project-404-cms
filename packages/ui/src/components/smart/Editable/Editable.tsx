@@ -41,7 +41,7 @@ export const Editable = ({
   const handleBlur = () => {
     setIsEditing(false);
 
-    // Call external onSave if provided from EditComponent
+    // Call external onSave if provided from Parent Component
     if (onSave) {
       onSave(value);
     }

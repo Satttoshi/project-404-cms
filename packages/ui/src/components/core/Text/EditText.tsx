@@ -2,7 +2,7 @@
 
 import React, { ChangeEvent } from 'react';
 
-type EditTextProps = {
+export type EditTextProps = {
   value: string;
   onChange: (value: string) => void;
   onBlur: () => void;
