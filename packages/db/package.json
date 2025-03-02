@@ -28,5 +28,24 @@
     "@types/node": "^22.13.8",
     "drizzle-kit": "^0.30.5",
     "typescript": "^5.8.2"
+  },
+  "turbo": {
+    "env": [
+      "DATABASE_URL",
+      "DATABASE_URL_UNPOOLED",
+      "PGHOST",
+      "PGHOST_UNPOOLED",
+      "PGUSER",
+      "PGDATABASE",
+      "PGPASSWORD",
+      "POSTGRES_URL",
+      "POSTGRES_URL_NON_POOLING",
+      "POSTGRES_USER",
+      "POSTGRES_HOST",
+      "POSTGRES_PASSWORD",
+      "POSTGRES_DATABASE",
+      "POSTGRES_URL_NO_SSL",
+      "POSTGRES_PRISMA_URL"
+    ]
   }
 }
