@@ -15,6 +15,6 @@ import { twMerge } from 'tailwind-merge';
  * // With conditional classes
  * cn('btn', isActive && 'btn-active', className)
  */
-export function cn(...inputs: ClassValue[]) {
+export function cn(...inputs: ClassValue[]): string {
   return twMerge(clsx(inputs));
 }
