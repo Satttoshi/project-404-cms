@@ -105,6 +105,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.3.4
         version: 4.3.4(vite@6.2.0(@types/node@22.13.8)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.39.0)(yaml@2.7.0))
+      concurrently:
+        specifier: ^9.1.2
+        version: 9.1.2
       eslint:
         specifier: ^9.21.0
         version: 9.21.0(jiti@2.4.2)
@@ -181,6 +184,9 @@ importers:
       '@types/react-dom':
         specifier: 19.0.3
         version: 19.0.3(@types/react@19.0.8)
+      concurrently:
+        specifier: ^9.1.2
+        version: 9.1.2
       eslint:
         specifier: ^9.21.0
         version: 9.21.0(jiti@2.4.2)
@@ -3763,6 +3769,11 @@ packages:
   concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
+  concurrently@9.1.2:
+    resolution: {integrity: sha512-H9MWcoPsYddwbOGM6difjVwVZHl63nwMEwDJG/L7VGtuaJhb12h2caPG2tVPWs7emuYix252iGfqOyrz1GczTQ==}
+    engines: {node: '>=18'}
+    hasBin: true
+
   constant-case@2.0.0:
     resolution: {integrity: sha512-eS0N9WwmjTqrOmR3o83F5vW8Z+9R1HnVz3xmzT2PMFug9ly+Au/fxRWlEBSb6LcZwspSsEn9Xs1uw9YgzAg1EQ==}
 
@@ -6317,6 +6328,10 @@ packages:
   tr46@5.0.0:
     resolution: {integrity: sha512-tk2G5R2KRwBd+ZN0zaEXpmzdKyOYksXwywulIX95MBODjSzMIuQnQ3m8JxgbhnL1LeVo7lqQKsYa1O3Htl7K5g==}
     engines: {node: '>=18'}
+
+  tree-kill@1.2.2:
+    resolution: {integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==}
+    hasBin: true
 
   ts-api-utils@2.0.1:
     resolution: {integrity: sha512-dnlgjFSVetynI8nzgJ+qF62efpglpWRk8isUEWZGWlJYySCTD6aKvbUDu+zbPeDakk3bg5H4XpitHukgfL1m9w==}
@@ -10414,6 +10429,16 @@ snapshots:
 
   concat-map@0.0.1: {}
 
+  concurrently@9.1.2:
+    dependencies:
+      chalk: 4.1.2
+      lodash: 4.17.21
+      rxjs: 7.8.1
+      shell-quote: 1.8.2
+      supports-color: 8.1.1
+      tree-kill: 1.2.2
+      yargs: 17.7.2
+
   constant-case@2.0.0:
     dependencies:
       snake-case: 2.1.0
@@ -13415,6 +13440,8 @@ snapshots:
   tr46@5.0.0:
     dependencies:
       punycode: 2.3.1
+
+  tree-kill@1.2.2: {}
 
   ts-api-utils@2.0.1(typescript@5.7.2):
     dependencies:

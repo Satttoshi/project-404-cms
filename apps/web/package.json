@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack --port 3000",
+    "dev": "concurrently \"pnpm --filter @repo/design-system dev\" \"pnpm --filter @repo/ui dev\" \"next dev --turbopack --port 3000\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint --max-warnings 0",
@@ -14,9 +14,9 @@
     "@repo/ui": "workspace:*",
     "@tailwindcss/postcss": "^4.0.9",
     "next": "^15.2.0",
+    "postcss": "^8.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "postcss": "^8.5.3",
     "tailwindcss": "^4.0.9"
   },
   "devDependencies": {
@@ -27,6 +27,7 @@
     "@types/node": "^22",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
+    "concurrently": "^9.1.2",
     "eslint": "^9.21.0",
     "typescript": "5.7.3"
   }
