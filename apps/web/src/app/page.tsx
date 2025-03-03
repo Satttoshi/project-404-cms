@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button, Editable } from '@repo/ui';
-import { ClientEditText, ClientText } from '../components/ClientText';
+import { Button, Editable, EditText } from '@repo/ui';
+import { ClientText } from '../components/ClientText';
 
 export default function Home(): React.ReactElement {
   return (
@@ -11,7 +11,7 @@ export default function Home(): React.ReactElement {
       <Button>Open alert</Button>
       <Editable
         initialValue={'Hi you can change my Text'}
-        editComponent={ClientEditText}
+        editComponent={EditText}
         displayComponent={ClientText}
       />
     </>
