@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "@repo/design-system/theme.css";
+@config "../tailwind.config.ts";
 
 /* Editable components (ec)*/
 @layer components {
@@ -8,6 +9,6 @@
         @apply bg-primary text-8xl text-tertiary;
     }
     .ec-text-content {
-        @apply p-2 text-tertiary;
+        @apply p-2 text-tertiary bg-amber-500;
     }
 }
