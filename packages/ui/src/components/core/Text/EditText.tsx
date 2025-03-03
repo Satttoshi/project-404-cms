@@ -20,16 +20,14 @@ export const EditText = ({
   };
 
   return (
-    <div>
-      <input
-        type="text"
-        value={value}
-        onChange={handleChange}
-        onBlur={onBlur}
-        onFocus={onFocus}
-        className="ec-text-content rounded border border-gray-300"
-        autoFocus
-      />
-    </div>
+    <input
+      type="text"
+      value={value}
+      onChange={handleChange}
+      onBlur={onBlur}
+      onFocus={onFocus}
+      className="ec-text-content rounded border border-gray-300"
+      autoFocus
+    />
   );
 };

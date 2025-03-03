@@ -56,7 +56,7 @@ export const Editable = ({
   };
 
   return (
-    <div>
+    <div onClick={handleDisplayClick}>
       {isEditing ? (
         <EditComponent
           value={value}
