@@ -1,14 +1,14 @@
-import { drizzle } from "drizzle-orm/neon-http";
-import { neon } from "@neondatabase/serverless";
-import dotenv from "dotenv";
+import { drizzle } from 'drizzle-orm/neon-http';
+import { neon } from '@neondatabase/serverless';
+import dotenv from 'dotenv';
 
-export * from "./schema";
+export * from './schema';
 
-dotenv.config({ path: "../../.env" });
+dotenv.config({ path: '../../.env' });
 
 const dbUrl = process.env.DATABASE_URL;
 if (!dbUrl) {
-  throw new Error("DATABASE_URL environment variable is not set");
+  throw new Error('DATABASE_URL environment variable is not set');
 }
 
 // Create and export the database connection
