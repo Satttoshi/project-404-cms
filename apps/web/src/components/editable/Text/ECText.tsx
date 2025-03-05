@@ -1,26 +1,20 @@
 import { Editable, EditText, Text } from '@repo/ui';
 import { ClientText } from './ClientText';
 import React from 'react';
-import { components, db } from '@repo/db';
-import { eq } from 'drizzle-orm';
+import { getComponentById } from '@repo/db';
 
 export const ECText = async () => {
   const isAdmin = true;
 
-  // Fetch component with id 1
-  const [component] = await db
-    .select()
-    .from(components)
-    .where(eq(components.id, 1));
+  const component = await getComponentById(1);
+  const textValue = component?.content?.value;
 
-  const json = component?.content as string;
-
-  console.log(json);
+  if (!textValue) return null;
 
   if (isAdmin) {
     return (
       <Editable
-        initialValue={json}
+        initialValue={textValue}
         editComponent={EditText}
         displayComponent={ClientText}
       />
