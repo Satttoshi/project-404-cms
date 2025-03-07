@@ -1,0 +1,56 @@
+erDiagram
+    organizations {
+        uuid id PK
+        text name
+        text slug
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    users {
+        uuid id PK
+        text name
+        text email
+        uuid organization_id FK
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    pages {
+        uuid id PK
+        text title
+        text slug
+        text description
+        json content
+        boolean published
+        uuid organization_id FK
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    components {
+        uuid id PK
+        text name
+        text type
+        json content
+        uuid parent_id FK
+        uuid organization_id FK
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    page_components {
+        uuid id PK
+        uuid page_id FK
+        uuid component_id FK
+        integer position
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    organizations ||--o{ users : "has"
+    organizations ||--o{ pages : "owns"
+    organizations ||--o{ components : "owns"
+    pages ||--o{ page_components : "contains"
+    components ||--o{ page_components : "used_in"
+    components ||--o{ components : "parent_of"
