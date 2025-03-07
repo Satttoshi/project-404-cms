@@ -12,7 +12,7 @@ DATABASE_URL=postgres://username:password@hostname:port/database
 
 ## Schema
 
-The database schema is defined in the `schema.ts` file. It includes tables for website pages, UI components, and uploaded assets.
+The database schema is defined in the `./src/schema/index.ts` file. It includes tables for website pages, UI components, and uploaded assets.
 An example schema is provided below:
 
 ```typescript

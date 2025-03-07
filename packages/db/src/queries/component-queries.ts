@@ -7,7 +7,7 @@ import { eq, inArray } from 'drizzle-orm';
  * @param id The component ID
  * @returns The component or undefined if not found
  */
-export async function getComponentById(id: number) {
+export async function getComponentById(id: string) {
   const results = await db
     .select()
     .from(components)
@@ -22,7 +22,7 @@ export async function getComponentById(id: number) {
  * @param ids Array of component IDs to retrieve
  * @returns Array of component records
  */
-export async function getComponentsByIds(ids: number[]) {
+export async function getComponentsByIds(ids: string[]) {
   if (!ids.length) {
     return [];
   }
