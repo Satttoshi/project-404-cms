@@ -6,7 +6,9 @@ import { getComponentById } from '@repo/db';
 export const ECText = async () => {
   const isAdmin = true;
 
-  const component = await getComponentById(1);
+  const component = await getComponentById(
+    '123e4567-e89b-12d3-a456-426614174124',
+  );
   const textValue = component?.content?.value;
 
   if (!textValue) return null;
