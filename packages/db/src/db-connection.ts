@@ -2,9 +2,6 @@
 
 import { drizzle } from 'drizzle-orm/neon-http';
 import { neon } from '@neondatabase/serverless';
-import dotenv from 'dotenv';
-
-dotenv.config({ path: '../../.env' });
 
 const dbUrl = process.env.DATABASE_URL;
 if (!dbUrl) {
