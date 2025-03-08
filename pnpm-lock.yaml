@@ -153,6 +153,9 @@ importers:
       '@tailwindcss/postcss':
         specifier: ^4.0.9
         version: 4.0.9
+      dotenv:
+        specifier: ^16.4.7
+        version: 16.4.7
       next:
         specifier: ^15.2.0
         version: 15.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -221,6 +224,9 @@ importers:
         specifier: ^19.0.0
         version: 19.0.0
     devDependencies:
+      '@repo/db':
+        specifier: workspace:*
+        version: link:../db
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
