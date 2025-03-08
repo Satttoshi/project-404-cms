@@ -1,8 +1,9 @@
 // apps/web/src/app/dashboard/page.tsx
 import { auth, signOut } from '../../utils/auth';
 import { redirect } from 'next/navigation';
+import { JSX } from 'react';
 
-export default async function DashboardPage() {
+export default async function DashboardPage(): Promise<JSX.Element> {
   const session = await auth();
 
   // If not authenticated, redirect to sign-in
