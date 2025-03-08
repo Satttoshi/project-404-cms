@@ -1,3 +1,5 @@
+// src/schema/index.ts
+
 import {
   pgTable,
   text,
