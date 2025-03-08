@@ -1,6 +1,6 @@
 {
-  "id": "fe1fe5c3-952f-4453-a79e-b02eeb2e2e2b",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "9c4735f5-daa2-4db0-9a49-8b34fe2eda83",
+  "prevId": "fe1fe5c3-952f-4453-a79e-b02eeb2e2e2b",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -32,26 +32,26 @@
           "primaryKey": false,
           "notNull": true
         },
-        "refreshToken": {
-          "name": "refreshToken",
+        "refresh_token": {
+          "name": "refresh_token",
           "type": "text",
           "primaryKey": false,
           "notNull": false
         },
-        "accessToken": {
-          "name": "accessToken",
+        "access_token": {
+          "name": "access_token",
           "type": "text",
           "primaryKey": false,
           "notNull": false
         },
-        "expiresAt": {
-          "name": "expiresAt",
+        "expires_at": {
+          "name": "expires_at",
           "type": "integer",
           "primaryKey": false,
           "notNull": false
         },
-        "tokenType": {
-          "name": "tokenType",
+        "token_type": {
+          "name": "token_type",
           "type": "text",
           "primaryKey": false,
           "notNull": false
@@ -62,14 +62,14 @@
           "primaryKey": false,
           "notNull": false
         },
-        "idToken": {
-          "name": "idToken",
+        "id_token": {
+          "name": "id_token",
           "type": "text",
           "primaryKey": false,
           "notNull": false
         },
-        "sessionState": {
-          "name": "sessionState",
+        "session_state": {
+          "name": "session_state",
           "type": "text",
           "primaryKey": false,
           "notNull": false
