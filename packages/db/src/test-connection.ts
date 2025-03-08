@@ -2,8 +2,9 @@ import dotenv from 'dotenv';
 import { neon } from '@neondatabase/serverless';
 import { drizzle } from 'drizzle-orm/neon-http';
 import { organizations } from './schema';
+import path from 'node:path';
 
-dotenv.config({ path: '../../.env' });
+dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 async function testConnection() {
   try {
