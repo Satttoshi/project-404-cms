@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 import { neon } from '@neondatabase/serverless';
 import { drizzle } from 'drizzle-orm/neon-http';
-import { pages } from './schema';
+import { organizations } from './schema';
 
 dotenv.config({ path: '../../.env' });
 
@@ -20,7 +20,7 @@ async function testConnection() {
 
     // Try to query the database
     console.log('Testing database connection...');
-    const result = await db.select().from(pages).limit(1);
+    const result = await db.select().from(organizations).limit(1);
     console.log('Connection successful!');
     console.log('Query result:', result);
     return true;
