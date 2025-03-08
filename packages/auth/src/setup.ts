@@ -1,7 +1,6 @@
 // src/setup.ts
 
 import NextAuth from 'next-auth';
-import type { NextAuthResult } from 'next-auth';
 import { createAuthConfig } from './auth-config';
 import type { AuthConfig } from './types';
 
@@ -10,7 +9,7 @@ import type { AuthConfig } from './types';
  * @param config - Auth.js configuration
  * @returns Auth.js handlers, auth, signIn, and signOut functions
  */
-export function setupAuth(config: AuthConfig = {}): NextAuthResult {
+export function setupAuth(config: AuthConfig = {}) {
   const authConfig = createAuthConfig(config);
   return NextAuth(authConfig);
 }

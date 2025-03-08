@@ -16,7 +16,6 @@ export { createDrizzleAdapter } from './adapters/drizzle';
 
 // Export types
 export type { AuthConfig } from './types';
-export type { NextAuthResult } from 'next-auth';
 
 // Re-export the next-auth default export
 export default NextAuth;
