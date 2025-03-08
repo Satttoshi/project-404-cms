@@ -2,6 +2,7 @@
   "$schema": "https://turbo.build/schema.json",
   "ui": "tui",
   "globalEnv": [
+    "AUTH_SECRET",
     "DATABASE_URL",
     "DATABASE_URL_UNPOOLED",
     "PGHOST",
