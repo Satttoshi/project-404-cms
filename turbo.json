@@ -3,6 +3,7 @@
   "ui": "tui",
   "globalEnv": [
     "AUTH_SECRET",
+    "NODE_ENV",
     "DATABASE_URL",
     "DATABASE_URL_UNPOOLED",
     "PGHOST",
