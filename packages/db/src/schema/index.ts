@@ -1,4 +1,4 @@
-// src/schema/index.ts
+// packages/db/src/schema/index.ts
 
 import {
   pgTable,

@@ -1,9 +1,7 @@
-// src/app/auth/signin/actions.tsx
-
 'use server';
 
-import { signIn } from '../../../utils/auth';
 import { redirect } from 'next/navigation';
+import { signIn } from './auth';
 
 export async function signInWithGoogle(callbackUrl: string = '/') {
   await signIn('google', { redirectTo: callbackUrl });
