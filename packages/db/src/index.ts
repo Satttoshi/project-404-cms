@@ -13,4 +13,5 @@ export type {
   Page,
   Component,
   PageComponents,
+  Authenticator,
 } from './schema';
