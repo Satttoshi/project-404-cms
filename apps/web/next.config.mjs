@@ -4,6 +4,8 @@ const nextConfig = {
   transpilePackages: [
     "@repo/design-system",
     "@repo/ui",
+    "@repo/db",
+    "@repo/auth"
   ],
 };
 

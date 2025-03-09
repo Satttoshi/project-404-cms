@@ -3,7 +3,7 @@ import {
   pageComponents,
   components,
   pages,
-  users,
+  user,
   organizations,
 } from './schema';
 import readline from 'readline';
@@ -49,7 +49,7 @@ async function pruneDatabase() {
     await db.delete(pages);
 
     console.log('Deleting records from users table...');
-    await db.delete(users);
+    await db.delete(user);
 
     console.log('Deleting records from organizations table...');
     await db.delete(organizations);

@@ -1,0 +1,40 @@
+{
+  "name": "@repo/auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.5.2",
+  "devDependencies": {
+    "@repo/db": "workspace:*",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.13.10",
+    "eslint": "^9.21.0",
+    "typescript": "5.7.3"
+  },
+  "dependencies": {
+    "@auth/drizzle-adapter": "^1.8.0",
+    "drizzle-orm": "^0.40.0",
+    "next-auth": "5.0.0-beta.25"
+  },
+  "peerDependencies": {
+    "next": "^15.2.0",
+    "react": "^19.0.0"
+  }
+}

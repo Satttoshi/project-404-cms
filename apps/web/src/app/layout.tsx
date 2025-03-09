@@ -4,6 +4,10 @@ import './globals.css';
 import '@repo/design-system/styles.css';
 import '@repo/ui/styles.css';
 import React from 'react';
+import path from 'node:path';
+import dotenv from 'dotenv';
+
+dotenv.config({ path: path.resolve(process.cwd(), '.env') });
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -26,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
