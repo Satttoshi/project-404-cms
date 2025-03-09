@@ -12,5 +12,6 @@ export type {
   Organization,
   Page,
   Component,
-  PageComponents,
+  PageComponent,
+  Authenticator,
 } from './schema';
