@@ -7,7 +7,7 @@ export const ECText = async () => {
   const isAdmin = true;
 
   const component = await getComponentById(
-    '123e4567-e89b-12d3-a456-426614174124',
+    '55555555-5555-5555-5555-555555555554',
   );
   const textValue = component?.content?.value;
 
