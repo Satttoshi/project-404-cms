@@ -22,7 +22,8 @@
     "check-types": "tsc --noEmit",
     "test:unit": "jest",
     "test:unit:withReport": "jest --reporters=default --reporters=jest-junit",
-    "test": "pnpm test:unit"
+    "test": "pnpm test:unit",
+    "clean": "rimraf node_modules dist"
   },
   "dependencies": {
     "@repo/design-system": "workspace:*",
