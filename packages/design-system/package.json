@@ -1,9 +1,6 @@
 {
   "name": "@repo/design-system",
   "version": "1.0.0",
-  "sideEffects": [
-    "**/*.css"
-  ],
   "files": [
     "dist"
   ],
@@ -15,7 +12,8 @@
     "build": "tailwindcss -i ./src/styles.css -o ./dist/styles.css",
     "lint": "eslint src/",
     "dev": "tailwindcss -i ./src/styles.css -o ./dist/styles.css --watch",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "clean": "rimraf node_modules dist"
   },
   "keywords": [],
   "author": "",

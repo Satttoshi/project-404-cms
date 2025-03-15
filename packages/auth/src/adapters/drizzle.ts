@@ -3,6 +3,7 @@
 import { DrizzleAdapter } from '@auth/drizzle-adapter';
 import type { Adapter } from 'next-auth/adapters';
 import type { PostgresJsDatabase } from 'drizzle-orm/postgres-js';
+import { users, accounts, sessions, verificationTokens } from '@repo/db';
 
 /**
  * Creates a Drizzle adapter for Auth.js using the project's PostgreSQL schema
@@ -14,5 +15,10 @@ export function createDrizzleAdapter(db: PostgresJsDatabase<any>): Adapter {
     throw new Error('No database connection provided to Drizzle adapter');
   }
 
-  return DrizzleAdapter(db);
+  return DrizzleAdapter(db, {
+    usersTable: users,
+    accountsTable: accounts,
+    sessionsTable: sessions,
+    verificationTokensTable: verificationTokens,
+  });
 }

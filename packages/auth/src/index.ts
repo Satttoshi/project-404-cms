@@ -1,4 +1,4 @@
-// src/index.ts
+// packages/auth/src/index.ts
 
 // Import and re-export from next-auth
 import NextAuth from 'next-auth';
@@ -11,6 +11,7 @@ export { setupAuth } from './setup';
 // Export provider creators
 export { createGoogleProvider } from './providers/google';
 export { createCredentialsProvider } from './providers/credentials';
+export { createNodemailerProvider } from './providers/nodemailer';
 
 // Export adapter creator
 export { createDrizzleAdapter } from './adapters/drizzle';

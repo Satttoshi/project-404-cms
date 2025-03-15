@@ -12,6 +12,7 @@
     "prepare": "husky install",
     "test": "echo \"No tests specified - pre-commit hook passing\"",
     "clear-cache": "rimraf .turbo node_modules/.cache apps/web/.next apps/storybook/storybook-static && echo Cache cleared successfully!",
+    "clean": "turbo run clean",
     "preinstall": "pnpm build --filter=@repo/design-system --filter=@repo/ui"
   },
   "devDependencies": {

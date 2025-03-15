@@ -5,6 +5,9 @@
   "exports": {
     ".": "./tailwind.config.ts"
   },
+  "scripts": {
+    "clean": "rimraf node_modules dist"
+  },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
     "tailwindcss": "^4.0.9"

@@ -5,6 +5,9 @@
   "exports": {
     ".": "./src/cn.ts"
   },
+  "scripts": {
+    "clean": "rimraf node_modules dist"
+  },
   "dependencies": {
     "clsx": "^2.1.1",
     "tailwind-merge": "^3.0.2"

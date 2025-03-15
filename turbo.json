@@ -36,6 +36,10 @@
         ".env.development",
         ".env"
       ]
+    },
+    "clean": {
+      "dependsOn": ["^clean"],
+      "cache": false
     }
   }
 }
