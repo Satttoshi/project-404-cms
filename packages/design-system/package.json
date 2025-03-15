@@ -1,9 +1,6 @@
 {
   "name": "@repo/design-system",
   "version": "1.0.0",
-  "sideEffects": [
-    "**/*.css"
-  ],
   "files": [
     "dist"
   ],
