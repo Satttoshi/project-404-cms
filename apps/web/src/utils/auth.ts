@@ -6,10 +6,11 @@ import {
   createDrizzleAdapter,
 } from '@repo/auth';
 import { db } from '@repo/db';
+import { createNodemailerProvider } from '@repo/auth/src/providers/nodemailer';
 
 const authConfig = setupAuth({
   adapter: createDrizzleAdapter(db),
-  providers: [createGoogleProvider()],
+  providers: [createGoogleProvider(), createNodemailerProvider()],
   session: {
     maxAge: 30 * 24 * 60 * 60, // 30 days
     updateAge: 24 * 60 * 60, // 24 hours
