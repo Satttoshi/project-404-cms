@@ -7,18 +7,26 @@ import { AuthConfig } from './types';
  * Creates an Auth.js configuration with sensible defaults
  */
 export function createAuthConfig(config: AuthConfig = {}): NextAuthConfig {
-  const { secret = process.env.AUTH_SECRET, providers = [], ...rest } = config;
+  const {
+    secret = process.env.AUTH_SECRET,
+    providers = [],
+    adapter,
+    ...rest
+  } = config;
 
   if (!secret) {
     throw new Error('No AUTH_SECRET provided for authentication');
   }
 
+  console.log('Auth is using db-session: ', !!adapter);
+
   return {
     secret,
     providers,
     debug: process.env.NODE_ENV === 'development',
+    adapter,
     session: {
-      strategy: 'jwt',
+      strategy: adapter ? 'database' : 'jwt',
       maxAge: 30 * 24 * 60 * 60, // 30 days
       updateAge: 24 * 60 * 60, // 24 hours
       ...rest.session,
@@ -40,14 +48,12 @@ export function createAuthConfig(config: AuthConfig = {}): NextAuthConfig {
         return token;
       },
       // Default session callback to sync with token
-      session: ({ session, token }) => {
-        if (session.user && token) {
-          session.user.id = token.id as string;
-          if (token.role) {
-            session.user.role = token.role as string;
-          }
-          if (token.organizationId) {
-            session.user.organizationId = token.organizationId as string;
+      session: ({ session, user }) => {
+        if (session.user && user) {
+          session.user.id = user.id;
+          session.user.role = user.role || 'user';
+          if (user.organizationId) {
+            session.user.organizationId = user.organizationId;
           }
         }
         return session;
